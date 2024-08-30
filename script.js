@@ -228,13 +228,16 @@ function createbox(tagname,tagtype,tagval)
     return element;
 }
 
-function createform(tagname,tagtype,tagval,formattri1,attrival1,formattri2,attrival2,formattri3,attrival3)
+function createform(tagname,tagtype,tagval,formname,nameval,formattri1,attrival1,formattri2,attrival2,formattri3,attrival3,formattri4,attrival4)
 {
     var element=document.createElement(tagname);
     element.setAttribute(tagtype,tagval);
     element.setAttribute(formattri1,attrival1);
     element.setAttribute(formattri2,attrival2);
     element.setAttribute(formattri3,attrival3);
+    element.setAttribute(formattri4,attrival4);
+    element.setAttribute(formname,nameval);
+
     return element;
 }
 
@@ -275,7 +278,7 @@ function createinputelement1(tagname,tagtype,tagval,tagsize,sizevalue,tagid,tagi
     return inputele;
 }
 
-function createinputelement2(tagname,tagtype,tagval,tagsize,sizevalue,tagid,tagidval,tagplacholder,holdername,innerval="",classtype,classname)
+function createinputelement2(tagname,tagtype,tagval,tagsize,sizevalue,tagid,tagidval,tagplacholder,holdername,innerval="",classtype,classname,autocom,status)
 {
     var inputele=document.createElement(tagname);
     inputele.setAttribute(tagtype,tagval);
@@ -283,6 +286,8 @@ function createinputelement2(tagname,tagtype,tagval,tagsize,sizevalue,tagid,tagi
     inputele.setAttribute(tagid,tagidval);
     inputele.setAttribute(tagplacholder,holdername);
     inputele.setAttribute(classtype,classname);
+    inputele.setAttribute(autocom,status);
+
     inputele.innerHTML=innerval;
     return inputele;
 }
@@ -316,13 +321,13 @@ var rightheading=createheadinwithstyle("h1","submitDataorary DataBase:","id","ti
 // var inputboxelement5=createinputelement1("input","type","text","name","data","id","state","placeholder","State");
 // var inputboxelement6=createinputelement1("input","type","text","name","data","id","country","placeholder","Country");
 
-var inputboxelement=createinputelement2("input","type","text","name","data","id","firstname","placeholder"," First Name","","class","inputdata");
-var inputboxelement1=createinputelement2("input","type","text","name","data1","id","lastname","placeholder","Last Name","","class","inputdata");
-var inputboxelement2=createinputelement2("input","type","textarea","name","data2","id","address1","placeholder","Address Line 1","","class","inputdata");
-var inputboxelement3=createinputelement2("input","type","textarea","name","data3","id","address2","placeholder","Address Line 2","","class","inputdata");
-var inputboxelement4=createinputelement2("input","type","number","name","data4","id","pin","placeholder","Pin","","class","inputdata");
-var inputboxelement5=createinputelement2("input","type","text","name","data5","id","state","placeholder","State","","class","inputdata");
-var inputboxelement6=createinputelement2("input","type","text","name","data6","id","country","placeholder","Country","","class","inputdata");
+var inputboxelement=createinputelement2("input","type","text","name","data","id","firstname","placeholder"," First Name","","class","inputdata","autocomplete","on");
+var inputboxelement1=createinputelement2("input","type","text","name","data1","id","lastname","placeholder","Last Name","","class","inputdata","autocomplete","on");
+var inputboxelement2=createinputelement2("input","type","textarea","name","data2","id","address1","placeholder","Address Line 1","","class","inputdata","autocomplete","on");
+var inputboxelement3=createinputelement2("input","type","textarea","name","data3","id","address2","placeholder","Address Line 2","","class","inputdata","autocomplete","on");
+var inputboxelement4=createinputelement2("input","type","number","name","data4","id","pin","placeholder","Pin","","class","inputdata","autocomplete","on");
+var inputboxelement5=createinputelement2("input","type","text","name","data5","id","state","placeholder","State","","class","inputdata","autocomplete","on");
+var inputboxelement6=createinputelement2("input","type","text","name","data6","id","country","placeholder","Country","","class","inputdata","autocomplete","on");
 
 
 
@@ -391,7 +396,7 @@ var label16=createinputelement("label","for","checkbox","Sea food");
 var contentLbox=createbox("div","class","contentbox");
 //var contentRbox=createbox("form","id","formdata");//contentbox2
 //var contentRbox=createform("form","id","form","method","post","action","#","onsubmit","submitData();return false");// sumbit func set as form submit element
-var contentRbox=createform("form","id","form","method","post","action","#","onsubmit",";return false");//to avoid page refresh
+var contentRbox=createform("form","id","form","name","f1","method","post","action","#","onsubmit",";return false","autocomplete","on");//to avoid page refresh
 var rightbox=createbox("div","class","rightbox");
 var leftbox=createbox("div","class","leftbox");
 var outerbox=createOuterbox("div","class","outerbox");
