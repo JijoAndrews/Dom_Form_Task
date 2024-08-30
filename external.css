@@ -1,0 +1,127 @@
+
+table, th, td 
+{
+    border: 1px solid black;
+    text-align: center;
+    padding: 20px;
+}
+
+
+h1,h2
+{
+    padding: 1%;
+    margin: 0px;
+    text-align: start;
+}
+
+
+
+label
+{
+    padding: 5px; 
+}
+
+
+
+.bgdesign
+{
+    background-color: rgb(197, 187, 166);
+}
+
+
+.tablebox
+{
+    padding: 10px;
+    align-self: center;
+    width: 100%;
+}
+
+
+.outerbox
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 50px;
+    min-width: fit-content;
+}
+
+
+.contentbox
+{
+    padding: 10px;
+    width: 100%;
+}
+
+.contentbox2
+{
+    padding: 10px;
+    display: grid;
+    width: 100%;
+}
+
+form
+{
+    padding: 10px;
+    display: grid;
+    width: 100%;
+}
+
+.inputbox
+{
+    padding: 10px;
+    display: grid;
+}
+
+.inputbox_01
+{
+    padding: 10px;
+    display: grid;
+}
+
+.inputradiobox
+{
+    display: flex;
+}
+.inputcheckbox
+{
+    display: grid;
+}
+
+.radiobox
+{
+    padding: 10px;
+}
+
+
+.checkboxheading
+{
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+
+.rightbox
+{
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.leftbox
+{
+    background-color: rgb(0, 105, 70);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+  /* Responsive layout - makes a one column-layout instead of two-column layout */
+  @media (max-width: 980px) {
+    .outerbox {
+      flex-direction: column;
+    }
+}
